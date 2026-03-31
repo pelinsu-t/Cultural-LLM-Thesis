@@ -1,1 +1,1 @@
-# Thesis-Project
+# Culturally Aware LLM
