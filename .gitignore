@@ -1,9 +1,12 @@
 data/raw/
 data/processed/
-data/outputs/
-.env
+data/output/
+data/submissions/
 data/
 .venv/
 __pycache__/
 .DS_Store
 env
+.env
+*.pyc
+.idea/
