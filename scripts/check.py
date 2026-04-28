@@ -5,8 +5,10 @@ from prompts.prompting_strategies import chain_of_thought_template, persona_temp
 from prompts.cultural_injection import cultural_injection_template
 from prompts.context_adapter import build_context
 
-from src.generation.mock_llm import mock_llm
+from src.generation.llm import load_llm
 from scripts.submission_runner import run_experiment
+
+llm = load_llm("/home/ubuntu/shared/models/llama-3_1_8b_it")
 
 
 input_files = [
@@ -85,7 +87,7 @@ for exp in experiments:
     run_experiment(
         input_files=input_files,
         output_dir=f"data/output/{exp['name']}",
-        llm=mock_llm,
+        llm=llm,
         experiment_config=exp["config"],
         prompt_fn=exp["prompt_fn"],
     )

@@ -23,7 +23,7 @@ def uncertainty_template(prompt:str) -> str:
 def combined_template(prompt:str, country:str) -> str:
     return ("Reason step by step before answering. Identify the cultural concepts and relevant norms "
             "(e.g., social, workplace, family), and infer the cultural context. "
-            "Answer as a local from {country}, reflecting realistic customs, traditions, and expectations. "
+            f"Answer as a local from {country}, reflecting realistic customs, traditions, and expectations. "
             "Avoid unsupported assumptions. If cultural details are uncertain, acknowledge this and respond cautiously. "
             "Give a clear and culturally appropriate answer.\n\n"
         f"{prompt}")
