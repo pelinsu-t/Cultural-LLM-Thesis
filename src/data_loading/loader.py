@@ -6,7 +6,4 @@ def load_data(path):
     return data
 
 
-# example
-# path1 = "/Users/pelinsutopaloglu/Thesis/Thesis-Project/data/raw/en_unspecific.jsonl"
-# print(load_data(path1)[7])
 

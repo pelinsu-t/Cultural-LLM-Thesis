@@ -1,8 +1,8 @@
 # this is a script for testing components of the pipeline
 
 from prompts.base import base_template
-from prompts.prompting_strategies import chain_of_thought_template, persona_template, uncertainty_template
-from prompts.cultural_injection import cultural_injection_template
+from prompts.prompting_strategies import get_prompt_fn
+from prompts.cultural_injection import get_cultural_injection_fn
 from prompts.context_adapter import build_context
 
 from src.generation.llm import load_llm
@@ -19,7 +19,7 @@ input_files = [
 experiments = [
     {
         "name": "experiment-1-base",
-        "prompt_fn": lambda entry: base_template(entry["prompt"]),
+        "prompt_fn": lambda entry, _lang: base_template(entry["prompt"]),
         "config": {
             "submissionid": "experiment-1-base",
             "label": "base",
@@ -29,7 +29,7 @@ experiments = [
     },
     {
         "name": "experiment-2a-cot",
-        "prompt_fn": lambda entry: chain_of_thought_template(entry["prompt"]),
+        "prompt_fn": lambda entry, lang: get_prompt_fn("chain_of_thought", lang)(entry["prompt"]),
         "config": {
             "submissionid": "experiment-2a-cot",
             "label": "chain-of-thought",
@@ -41,7 +41,7 @@ experiments = [
     },
     {
         "name": "experiment-2b-persona",
-        "prompt_fn": lambda entry: persona_template(
+        "prompt_fn": lambda entry, lang: get_prompt_fn("persona", lang)(
             entry["prompt"],
             build_context(entry)["culture"]
         ),
@@ -56,7 +56,7 @@ experiments = [
     },
     {
         "name": "experiment-2c-uncertainty",
-        "prompt_fn": lambda entry: uncertainty_template(entry["prompt"]),
+        "prompt_fn": lambda entry, lang: get_prompt_fn("uncertainty", lang)(entry["prompt"]),
         "config": {
             "submissionid": "experiment-2c-uncertainty",
             "label": "uncertainty-aware",
@@ -68,7 +68,7 @@ experiments = [
     },
     {
         "name": "experiment-3-cultural-injection",
-        "prompt_fn": lambda entry: cultural_injection_template(
+        "prompt_fn": lambda entry, lang: get_cultural_injection_fn(lang)(
             **build_context(entry)
         ),
         "config": {

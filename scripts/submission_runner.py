@@ -18,15 +18,15 @@ def run_experiment(
     experiment_config: metadata describing this experiment
     """
     if prompt_fn is None:
-        prompt_fn = lambda entry: entry["prompt"]
+        prompt_fn = lambda entry, _lang: entry["prompt"]
 
     for path, language, split_type in input_files:
         data = load_data(path)
 
         entries = []
         for entry in data:
-            formatted_prompt = prompt_fn(entry)
-            answer = llm(entry["prompt"])
+            formatted_prompt = prompt_fn(entry, language)
+            answer = llm(formatted_prompt)
             entries.append({
                 "id": entry["id"],
                 "prompt": entry["prompt"], # saving the original prompt not the modified version
