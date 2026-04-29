@@ -63,7 +63,6 @@ def combined_de(prompt: str, country: str) -> str:
 
 
 ### GREEK
-# to be checked
 def chain_of_thought_el(prompt: str) -> str:
     return ("Σκέψου την ερώτηση βήμα προς βήμα πριν απαντήσεις. "
         "Εντόπισε τις πολιτισμικές έννοιες που τίθενται, καθόρισε ποια είδη κανόνων είναι "
@@ -97,7 +96,6 @@ def combined_el(prompt: str, country: str) -> str:
 
 
 ### SPANISH
-# to be checked
 def chain_of_thought_es(prompt: str) -> str:
     return ("Piensa en la pregunta paso a paso antes de responder. "
             "Identifica los conceptos culturales involucrados, determina qué tipos de normas son "
@@ -164,7 +162,6 @@ def combined_it(prompt: str, country: str) -> str:
 
 
 ### POLISH
-# To be checked
 def chain_of_thought_pl(prompt: str) -> str:
     return ("Przemyśl pytanie krok po kroku, zanim odpowiesz. "
             "Zidentyfikuj poruszane koncepcje kulturowe, określ, jakie rodzaje norm są "

@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 from src.data_loading.loader import load_data
 from src.query_understanding.keyword_extraction import extract_keywords_from_data
 
@@ -9,11 +10,21 @@ def save_jsonl(data, path):
             f.write(json.dumps(entry, ensure_ascii=False) + "\n")
 
 if __name__ == "__main__":
-    input_path = "data/raw/en_specific.jsonl"
-    output_path = "data/processed/en_specific_features.jsonl"
+    raw_dir = Path("data/raw")
+    processed_dir = Path("data/processed")
+    processed_dir.mkdir(parents=True, exist_ok=True)
 
-    data = load_data(input_path)
-    results = extract_keywords_from_data(data, top_n=5)
-    save_jsonl(results, output_path)
+    input_files = sorted(raw_dir.glob("*.jsonl"))
+    if not input_files:
+        print("No JSONL files found in data/raw/")
+        exit(1)
 
-    print(f"Saved {len(results)} entries to {output_path}")
+    for input_path in input_files:
+        stem = input_path.stem  # e.g. "de_specific"
+        output_path = processed_dir / f"{stem}_features.jsonl"
+
+        print(f"\nProcessing {input_path} ...")
+        data = load_data(str(input_path))
+        results = extract_keywords_from_data(data, top_n=5)
+        save_jsonl(results, output_path)
+        print(f"Saved {len(results)} entries to {output_path}")
