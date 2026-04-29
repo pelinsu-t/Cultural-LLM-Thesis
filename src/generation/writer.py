@@ -22,7 +22,7 @@ def write_metadata(output_dir: str, experiment_config: dict):
         "team": experiment_config.get("team", "su"),
         "system": experiment_config.get("system", "base_system"),
         "model": experiment_config.get("model", "mock-llm"),
-        "submissionid": experiment_config.get("submission1", "experiment-1"),
+        "submissionid": experiment_config.get("submissionid", "experiment-1"),
         "date": str(date.today()),
         "label": experiment_config.get("label", ""),
         "languages": experiment_config.get("languages", ["en"]),

@@ -1,18 +1,14 @@
 import re
-import pycountry
+from babel import Locale
 
+SUPPORTED_LOCALES = ["en", "de", "el", "es", "it", "pl", "ru", "tr"]
 
 def get_country_terms():
-    countries = []
-
-    for country in pycountry.countries:
-        countries.append(country.name.lower())
-
-        # Optional: include common names
-        if hasattr(country, "official_name"):
-            countries.append(country.official_name.lower())
-
-    return list(set(countries))
+    terms = set()
+    for lang in SUPPORTED_LOCALES:
+        for name in Locale(lang).territories.values():
+            terms.add(name.lower())
+    return list(terms)
 
 
 CULTURE_TERMS = get_country_terms()
