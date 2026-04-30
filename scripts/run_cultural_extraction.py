@@ -23,6 +23,10 @@ if __name__ == "__main__":
         stem = input_path.stem  # e.g. "de_specific"
         output_path = processed_dir / f"{stem}_features.jsonl"
 
+        if output_path.exists():
+            print(f"Skipping {input_path} (output already exists)")
+            continue
+
         print(f"\nProcessing {input_path} ...")
         data = load_data(str(input_path))
         results = extract_keywords_from_data(data, top_n=5)
