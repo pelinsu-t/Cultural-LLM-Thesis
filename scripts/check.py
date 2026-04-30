@@ -12,8 +12,22 @@ llm = load_llm("/home/ubuntu/shared/models/llama-3_1_8b_it")
 
 
 input_files = [
-    ("data/processed/en_specific_features.jsonl", "en", "specific"),
-    #("data/processed/en_unspecific_features.jsonl", "en", "unspecific"),
+    ("data/processed/de_specific_features.jsonl", "de", "specific"),
+    ("data/processed/de_unspecific_features.jsonl", "de", "unspecific"),
+    ("data/processed/el_specific_features.jsonl", "el", "specific"),
+    ("data/processed/el_unspecific_features.jsonl", "el", "unspecific"),
+    # ("data/processed/en_specific_features.jsonl", "en", "specific"),
+    ("data/processed/en_unspecific_features.jsonl", "en", "unspecific"),
+    ("data/processed/es_specific_features.jsonl", "es", "specific"),
+    ("data/processed/es_unspecific_features.jsonl", "es", "unspecific"),
+    ("data/processed/it_specific_features.jsonl", "it", "specific"),
+    ("data/processed/it_unspecific_features.jsonl", "it", "unspecific"),
+    ("data/processed/pl_specific_features.jsonl", "pl", "specific"),
+    ("data/processed/pl_unspecific_features.jsonl", "pl", "unspecific"),
+    ("data/processed/ru_specific_features.jsonl", "ru", "specific"),
+    ("data/processed/ru_unspecific_features.jsonl", "ru", "unspecific"),
+    ("data/processed/tr_specific_features.jsonl", "tr", "specific"),
+    ("data/processed/tr_unspecific_features.jsonl", "tr", "unspecific"),
 ]
 
 experiments = [
@@ -23,7 +37,7 @@ experiments = [
         "config": {
             "submissionid": "experiment-1-base",
             "label": "base",
-            "languages": ["en"],
+            "languages": ["de", "el", "en", "es", "it", "pl", "ru", "tr"],
             "modifications": {}
         }
     },
@@ -33,9 +47,14 @@ experiments = [
         "config": {
             "submissionid": "experiment-2a-cot",
             "label": "chain-of-thought",
-            "languages": ["en"],
+            "languages": ["de", "el", "en", "es", "it", "pl", "ru", "tr"],
             "modifications": {
-                "prompt_prefix_english": "Consider the following question carefully..."
+                "prompt_prefix_english": "Think through the question step by step before answering. "
+            "Identify the cultural concepts being asked about, determine which kinds of norms are "
+            "relevant (for example social, workplace, family, or religious norms), "
+            "and infer the specific culture or cultural setting the user is referring to. "
+            "Then interpret the question within that context and provide a culturally appropriate, "
+            "accurate, and context-sensitive answer."
             }
         }
     },
@@ -48,9 +67,11 @@ experiments = [
         "config": {
             "submissionid": "experiment-2b-persona",
             "label": "persona",
-            "languages": ["en"],
+            "languages": ["de", "el", "en", "es", "it", "pl", "ru", "tr"],
             "modifications": {
-                "prompt_prefix_english": "You are a local in {culture}..."
+                "prompt_prefix_english": "Answer as someone who lives in {country} and is familiar with its customs, "
+                "traditions, and everyday norms. Provide responses that reflect how people "
+                "in that culture would typically understand and handle the situation."
             }
         }
     },
@@ -60,9 +81,12 @@ experiments = [
         "config": {
             "submissionid": "experiment-2c-uncertainty",
             "label": "uncertainty-aware",
-            "languages": ["en"],
+            "languages": ["de", "el", "en", "es", "it", "pl", "ru", "tr"],
             "modifications": {
-                "prompt_prefix_english": "Before you answer, evaluate uncertainty..."
+                "prompt_prefix_english":
+                    "Before answering, carefully evaluate what can be inferred from the question and what cannot. "
+                    "Avoid making unsupported assumptions about cultural specifics. When the cultural context is "
+                    "ambiguous or your confidence is limited, explicitly acknowledge the uncertainty and answer cautiously."
             }
         }
     },
@@ -74,9 +98,9 @@ experiments = [
         "config": {
             "submissionid": "experiment-3-cultural-injection",
             "label": "cultural-injection-ner",
-            "languages": ["en"],
+            "languages": ["de", "el", "en", "es", "it", "pl", "ru", "tr"],
             "modifications": {
-                "prompt_prefix_english": "Context: {keywords}\nCulture: {culture}"
+                "prompt_prefix_english": "Context: {keywords} \n Culture: {culture}"
             }
         }
     },

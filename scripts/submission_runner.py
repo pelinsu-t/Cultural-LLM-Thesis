@@ -1,3 +1,4 @@
+import os
 from src.data_loading.loader import load_data
 from src.generation.writer import write_jsonl, write_metadata, zip_submission
 
@@ -21,6 +22,11 @@ def run_experiment(
         prompt_fn = lambda entry, _lang: entry["prompt"]
 
     for path, language, split_type in input_files:
+        output_path = f"{output_dir}/{language}_{split_type}.jsonl"
+        if os.path.exists(output_path):
+            print(f"Skipping {output_path} (already exists)")
+            continue
+
         data = load_data(path)
 
         entries = []
@@ -33,7 +39,6 @@ def run_experiment(
                 "answer": answer,
             })
 
-        output_path = f"{output_dir}/{language}_{split_type}.jsonl"
         write_jsonl(entries, output_path)
         print(f"Written {len(entries)} entries to {output_path}")
 
