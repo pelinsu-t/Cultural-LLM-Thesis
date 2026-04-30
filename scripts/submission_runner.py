@@ -1,6 +1,7 @@
 import os
 from src.data_loading.loader import load_data
 from src.generation.writer import write_jsonl, write_metadata, zip_submission
+from tqdm import tqdm
 
 
 def run_experiment(
@@ -30,7 +31,7 @@ def run_experiment(
         data = load_data(path)
 
         entries = []
-        for entry in data:
+        for entry in tqdm(data, desc=f"{language}_{split_type}"):
             formatted_prompt = prompt_fn(entry, language)
             answer = llm(formatted_prompt)
             entries.append({

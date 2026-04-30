@@ -36,6 +36,7 @@ experiments = [
         "prompt_fn": lambda entry, _lang: base_template(entry["prompt"]),
         "config": {
             "submissionid": "experiment-1-base",
+            "system": "base",
             "label": "base",
             "languages": ["de", "el", "en", "es", "it", "pl", "ru", "tr"],
             "modifications": {}
@@ -46,6 +47,7 @@ experiments = [
         "prompt_fn": lambda entry, lang: get_prompt_fn("chain_of_thought", lang)(entry["prompt"]),
         "config": {
             "submissionid": "experiment-2a-cot",
+            "system": "prompted",
             "label": "chain-of-thought",
             "languages": ["de", "el", "en", "es", "it", "pl", "ru", "tr"],
             "modifications": {
@@ -66,6 +68,7 @@ experiments = [
         ),
         "config": {
             "submissionid": "experiment-2b-persona",
+            "system": "prompted",
             "label": "persona",
             "languages": ["de", "el", "en", "es", "it", "pl", "ru", "tr"],
             "modifications": {
@@ -80,6 +83,7 @@ experiments = [
         "prompt_fn": lambda entry, lang: get_prompt_fn("uncertainty", lang)(entry["prompt"]),
         "config": {
             "submissionid": "experiment-2c-uncertainty",
+            "system": "prompted",
             "label": "uncertainty-aware",
             "languages": ["de", "el", "en", "es", "it", "pl", "ru", "tr"],
             "modifications": {
@@ -97,6 +101,7 @@ experiments = [
         ),
         "config": {
             "submissionid": "experiment-3-cultural-injection",
+            "system": "keyword-prompting",
             "label": "cultural-injection-ner",
             "languages": ["de", "el", "en", "es", "it", "pl", "ru", "tr"],
             "modifications": {

@@ -21,7 +21,7 @@ def write_metadata(output_dir: str, experiment_config: dict):
     metadata = {
         "team": experiment_config.get("team", "su"),
         "system": experiment_config.get("system", "base_system"),
-        "model": experiment_config.get("model", "mock-llm"),
+        "model": experiment_config.get("model", "llama-3_1_8b_it"),
         "submissionid": experiment_config.get("submissionid", "experiment-1"),
         "date": str(date.today()),
         "label": experiment_config.get("label", ""),
