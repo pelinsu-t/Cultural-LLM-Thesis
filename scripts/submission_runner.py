@@ -30,15 +30,13 @@ def run_experiment(
 
         data = load_data(path)
 
-        entries = []
-        for entry in tqdm(data, desc=f"{language}_{split_type}"):
-            formatted_prompt = prompt_fn(entry, language)
-            answer = llm(formatted_prompt)
-            entries.append({
-                "id": entry["id"],
-                "prompt": entry["prompt"], # saving the original prompt not the modified version
-                "answer": answer,
-            })
+        print(f"Generating {len(data)} prompts for {language}_{split_type}...")
+        prompts = [prompt_fn(entry, language) for entry in data]
+        answers = llm.batch(prompts)
+        entries = [
+            {"id": entry["id"], "prompt": entry["prompt"], "answer": ans}
+            for entry, ans in zip(data, answers)
+        ]
 
         write_jsonl(entries, output_path)
         print(f"Written {len(entries)} entries to {output_path}")
