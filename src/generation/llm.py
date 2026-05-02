@@ -1,44 +1,17 @@
-import torch
-from transformers import AutoTokenizer, pipeline
-from tqdm import tqdm
+from vllm import LLM, SamplingParams
 
 
-def load_llm(model_path: str, max_new_tokens: int = 200, batch_size: int = 16):
-    tokenizer = AutoTokenizer.from_pretrained(model_path)
-    # required for batched generation with causal LMs
-    if tokenizer.pad_token is None:
-        tokenizer.pad_token = tokenizer.eos_token
-    tokenizer.padding_side = "left"
-
-    pipe = pipeline(
-        "text-generation",
-        model=model_path,
-        tokenizer=tokenizer,
-        device_map="auto",
-        torch_dtype=torch.bfloat16,
-    )
-
+def load_llm(model_path: str, max_new_tokens: int = 200):
+    model = LLM(model=model_path, dtype="bfloat16")
+    sampling_params = SamplingParams(max_tokens=max_new_tokens, temperature=0)
 
     def llm(prompt: str) -> str:
-        messages = [{"role": "user", "content": prompt}]
-        out = pipe(messages, max_new_tokens=max_new_tokens, do_sample=False)
-        return out[0]["generated_text"][-1]["content"]
-
+        outputs = model.generate([prompt], sampling_params)
+        return outputs[0].outputs[0].text
 
     def batch(prompts: list[str]) -> list[str]:
-        all_messages = [[{"role": "user", "content": p}] for p in prompts]
-        results = []
-        for i in tqdm(range(0, len(all_messages), batch_size), desc="batches"):
-            chunk = all_messages[i:i + batch_size]
-            outputs = pipe(
-                chunk,
-                max_new_tokens=max_new_tokens,
-                do_sample=False,
-                batch_size=batch_size,
-            )
-            results.extend(o[0]["generated_text"][-1]["content"] for o in outputs)
-        return results
-
+        outputs = model.generate(prompts, sampling_params)
+        return [o.outputs[0].text for o in outputs]
 
     llm.batch = batch
     return llm
