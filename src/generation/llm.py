@@ -3,7 +3,7 @@ from transformers import AutoTokenizer, pipeline
 from tqdm import tqdm
 
 
-def load_llm(model_path: str, max_new_tokens: int = 200, batch_size: int = 16):
+def load_llm(model_path: str, max_new_tokens: int = 200, batch_size: int = 1):
     tokenizer = AutoTokenizer.from_pretrained(model_path, use_fast=True)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
