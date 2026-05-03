@@ -1,8 +1,6 @@
 data/raw/
 data/processed/
-data/output/
 data/submissions/
-data/
 .venv/
 __pycache__/
 .DS_Store
