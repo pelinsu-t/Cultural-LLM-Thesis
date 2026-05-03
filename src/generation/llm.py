@@ -3,7 +3,7 @@ from transformers import AutoTokenizer, pipeline
 from tqdm import tqdm
 
 
-def load_llm(model_path: str, max_new_tokens: int = 200, batch_size: int = 1):
+def load_llm(model_path: str, max_new_tokens: int = 200, batch_size: int = 32):
     tokenizer = AutoTokenizer.from_pretrained(model_path, use_fast=True)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
@@ -36,17 +36,13 @@ def load_llm(model_path: str, max_new_tokens: int = 200, batch_size: int = 1):
     def batch(prompts: list[str]) -> list[str]:
         all_messages = [[{"role": "user", "content": p}] for p in prompts]
         results = []
-        for i in tqdm(range(0, len(all_messages), batch_size), desc="batches"):
-            chunk = all_messages[i:i + batch_size]
-            outputs = pipe(
-                chunk,
-                max_new_tokens=max_new_tokens,
-                do_sample=False,
-                batch_size=batch_size,
-                padding=True,
-                truncation=True,
-            )
-            results.extend(o[0]["generated_text"][-1]["content"] for o in outputs)
+        for output in tqdm(
+            pipe(all_messages, max_new_tokens=max_new_tokens, do_sample=False,
+                 batch_size=batch_size, padding=True, truncation=True),
+            total=len(all_messages),
+            desc="batches",
+        ):
+            results.append(output[0]["generated_text"][-1]["content"])
         return results
 
     llm.batch = batch
