@@ -76,15 +76,3 @@ def extract_keywords_from_data(data: list, top_n: int = 5) -> list:
         })
 
     return output
-
-# example usage
-"""
-if __name__ == "__main__":
-    path = "data/raw/en_specific.jsonl"
-    data = load_data(path)
-
-    results = extract_keywords_from_data(data[:3], top_n=5)
-
-    for result in results:
-        print(result)
-        print()"""

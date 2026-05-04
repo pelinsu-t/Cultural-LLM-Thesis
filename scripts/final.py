@@ -9,6 +9,7 @@ from src.generation.llm import load_llm
 from scripts.submission_runner import run_experiment
 
 llm = load_llm("/home/ubuntu/shared/models/llama-3_1_8b_it")
+# /home/ubuntu/shared/models/aya-expanse-8b
 
 
 input_files = [
@@ -16,7 +17,7 @@ input_files = [
     ("data/processed/de_unspecific_features.jsonl", "de", "unspecific"),
     ("data/processed/el_specific_features.jsonl", "el", "specific"),
     ("data/processed/el_unspecific_features.jsonl", "el", "unspecific"),
-    # ("data/processed/en_specific_features.jsonl", "en", "specific"),
+    ("data/processed/en_specific_features.jsonl", "en", "specific"),
     ("data/processed/en_unspecific_features.jsonl", "en", "unspecific"),
     ("data/processed/es_specific_features.jsonl", "es", "specific"),
     ("data/processed/es_unspecific_features.jsonl", "es", "unspecific"),

@@ -1,6 +1,7 @@
 data/raw/
 data/processed/
 data/submissions/
+data/output/experiment-4-rag/
 .venv/
 __pycache__/
 .DS_Store
@@ -9,3 +10,6 @@ env
 *.pyc
 .idea/
 .claude/
+src/query_understanding/rag.py
+scripts/run_rag_experiment.py
+tests/component_testing.py

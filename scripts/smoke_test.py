@@ -1,5 +1,5 @@
 """
-Quick smoke test — run on the server before check.py to verify the full pipeline.
+Quick smoke test — run on the server before final.py to verify the full pipeline.
 Usage: PYTHONPATH=. python scripts/smoke_test.py
 """
 N_SAMPLES = 10
