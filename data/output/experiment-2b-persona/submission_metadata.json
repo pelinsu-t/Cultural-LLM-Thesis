@@ -1,0 +1,21 @@
+{
+  "team": "su",
+  "system": "prompted",
+  "model": "llama-3_1_8b_it",
+  "submissionid": "experiment-2b-persona",
+  "date": "2026-05-04",
+  "label": "persona",
+  "languages": [
+    "de",
+    "el",
+    "en",
+    "es",
+    "it",
+    "pl",
+    "ru",
+    "tr"
+  ],
+  "modifications": {
+    "prompt_prefix_english": "Answer as someone who lives in {country} and is familiar with its customs, traditions, and everyday norms. Provide responses that reflect how people in that culture would typically understand and handle the situation."
+  }
+}

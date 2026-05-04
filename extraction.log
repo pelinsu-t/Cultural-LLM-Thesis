@@ -1,0 +1,58 @@
+nohup: ignoring input
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.17it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.18it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.20it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.73it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.48it/s]
+Device set to use cuda:0
+
+Running experiment-2d-combined...
+Generating 4140 prompts for de_specific...
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1573148.99it/s]
+Written 4140 entries to data/output/experiment-2d-combined/de_specific.jsonl
+Generating 101 prompts for de_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 862779.44it/s]
+Written 101 entries to data/output/experiment-2d-combined/de_unspecific.jsonl
+Generating 4140 prompts for el_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1523328.24it/s]
+Written 4140 entries to data/output/experiment-2d-combined/el_specific.jsonl
+Generating 101 prompts for el_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1035757.22it/s]
+Written 101 entries to data/output/experiment-2d-combined/el_unspecific.jsonl
+Generating 4140 prompts for en_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1622994.54it/s]
+Written 4140 entries to data/output/experiment-2d-combined/en_specific.jsonl
+Generating 101 prompts for en_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1245955.01it/s]
+Written 101 entries to data/output/experiment-2d-combined/en_unspecific.jsonl
+Generating 4140 prompts for es_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1536130.45it/s]
+Written 4140 entries to data/output/experiment-2d-combined/es_specific.jsonl
+Generating 101 prompts for es_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1086217.19it/s]
+Written 101 entries to data/output/experiment-2d-combined/es_unspecific.jsonl
+Generating 4140 prompts for it_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1560005.26it/s]
+Written 4140 entries to data/output/experiment-2d-combined/it_specific.jsonl
+Generating 101 prompts for it_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 994424.19it/s]
+Written 101 entries to data/output/experiment-2d-combined/it_unspecific.jsonl
+Generating 4140 prompts for pl_specific...
+You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1481985.03it/s]
+Written 4140 entries to data/output/experiment-2d-combined/pl_specific.jsonl
+Generating 101 prompts for pl_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1210356.30it/s]
+Written 101 entries to data/output/experiment-2d-combined/pl_unspecific.jsonl
+Generating 4140 prompts for ru_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1510080.75it/s]
+Written 4140 entries to data/output/experiment-2d-combined/ru_specific.jsonl
+Generating 101 prompts for ru_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1043410.60it/s]
+Written 101 entries to data/output/experiment-2d-combined/ru_unspecific.jsonl
+Generating 4140 prompts for tr_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1425650.13it/s]
+Written 4140 entries to data/output/experiment-2d-combined/tr_specific.jsonl
+Generating 101 prompts for tr_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1323827.20it/s]
+Written 101 entries to data/output/experiment-2d-combined/tr_unspecific.jsonl
+Submission saved to data/submissions/experiment-2d-combined.zip
+Done — check data/submissions/experiment-2d-combined.zip
