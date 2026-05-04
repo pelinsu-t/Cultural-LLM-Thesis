@@ -8,8 +8,9 @@ from prompts.context_adapter import build_context
 from src.generation.llm import load_llm
 from scripts.submission_runner import run_experiment
 
-llm = load_llm("/home/ubuntu/shared/models/llama-3_1_8b_it")
-# /home/ubuntu/shared/models/aya-expanse-8b
+llm = load_llm("/home/ubuntu/shared/models/aya-expanse-8b")
+# "/home/ubuntu/shared/models/llama-3_1_8b_it")
+
 
 
 input_files = [
@@ -92,6 +93,26 @@ experiments = [
                     "Before answering, carefully evaluate what can be inferred from the question and what cannot. "
                     "Avoid making unsupported assumptions about cultural specifics. When the cultural context is "
                     "ambiguous or your confidence is limited, explicitly acknowledge the uncertainty and answer cautiously."
+            }
+        }
+    },
+    {
+        "name": "experiment-2d-combined",
+        "prompt_fn": lambda entry, lang: get_prompt_fn("combined", lang)(
+            entry["prompt"],
+            build_context(entry)["culture"]
+        ),
+        "config": {
+            "submissionid": "experiment-2d-combined",
+            "system": "prompted",
+            "label": "combined",
+            "languages": ["de", "el", "en", "es", "it", "pl", "ru", "tr"],
+            "modifications": {
+                "prompt_prefix_english": "Reason step by step before answering. Identify the cultural concepts and relevant norms "
+                    "(e.g., social, workplace, family), and infer the cultural context. "
+                    "Answer as a local from {country}, reflecting realistic customs, traditions, and expectations. "
+                    "Avoid unsupported assumptions. If cultural details are uncertain, acknowledge this and respond cautiously. "
+                    "Give a clear and culturally appropriate answer."
             }
         }
     },
