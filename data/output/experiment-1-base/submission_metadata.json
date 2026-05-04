@@ -1,0 +1,19 @@
+{
+  "team": "su",
+  "system": "base",
+  "model": "llama-3_1_8b_it",
+  "submissionid": "experiment-1-base",
+  "date": "2026-05-04",
+  "label": "base",
+  "languages": [
+    "de",
+    "el",
+    "en",
+    "es",
+    "it",
+    "pl",
+    "ru",
+    "tr"
+  ],
+  "modifications": {}
+}

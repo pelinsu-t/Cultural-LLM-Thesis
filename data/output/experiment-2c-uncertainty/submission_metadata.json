@@ -1,0 +1,21 @@
+{
+  "team": "su",
+  "system": "prompted",
+  "model": "llama-3_1_8b_it",
+  "submissionid": "experiment-2c-uncertainty",
+  "date": "2026-05-04",
+  "label": "uncertainty-aware",
+  "languages": [
+    "de",
+    "el",
+    "en",
+    "es",
+    "it",
+    "pl",
+    "ru",
+    "tr"
+  ],
+  "modifications": {
+    "prompt_prefix_english": "Before answering, carefully evaluate what can be inferred from the question and what cannot. Avoid making unsupported assumptions about cultural specifics. When the cultural context is ambiguous or your confidence is limited, explicitly acknowledge the uncertainty and answer cautiously."
+  }
+}
