@@ -8,8 +8,13 @@ from prompts.context_adapter import build_context
 from src.generation.llm import load_llm
 from scripts.submission_runner import run_experiment
 
-llm = load_llm("/home/ubuntu/shared/models/aya-expanse-8b")
-# "/home/ubuntu/shared/models/llama-3_1_8b_it")
+MODEL = "aya"  # change to "llama" to switch models
+MODEL_PATHS = {
+    #"llama": "/home/ubuntu/shared/models/llama-3_1_8b_it",
+    "aya": "/home/ubuntu/shared/models/aya-expanse-8b",
+}
+
+llm = load_llm(MODEL_PATHS[MODEL])
 
 
 
@@ -137,7 +142,7 @@ for exp in experiments:
     print(f"\nRunning {exp['name']}...")
     run_experiment(
         input_files=input_files,
-        output_dir=f"data/output/{exp['name']}",
+        output_dir=f"data/output/{MODEL}/{exp['name']}",
         llm=llm,
         experiment_config=exp["config"],
         prompt_fn=exp["prompt_fn"],
