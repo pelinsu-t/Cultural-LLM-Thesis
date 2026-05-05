@@ -1,58 +1,319 @@
 nohup: ignoring input
 `torch_dtype` is deprecated! Use `dtype` instead!
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.17it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.18it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.20it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.73it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.48it/s]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.12it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.11it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.11it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.58it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.37it/s]
 Device set to use cuda:0
+
+Running experiment-1-base...
+Generating 4140 prompts for de_specific...
+Asking to truncate to max_length but no maximum length is provided and the model has no predefined maximum length. Default to no truncation.
+The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1667731.33it/s]
+Written 4140 entries to data/output/aya/experiment-1-base/de_specific.jsonl
+Generating 101 prompts for de_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1106069.72it/s]
+Written 101 entries to data/output/aya/experiment-1-base/de_unspecific.jsonl
+Generating 4140 prompts for el_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1566902.96it/s]
+Written 4140 entries to data/output/aya/experiment-1-base/el_specific.jsonl
+Generating 101 prompts for el_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1455755.00it/s]
+Written 101 entries to data/output/aya/experiment-1-base/el_unspecific.jsonl
+Generating 4140 prompts for en_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1666291.00it/s]
+Written 4140 entries to data/output/aya/experiment-1-base/en_specific.jsonl
+Generating 101 prompts for en_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1465829.43it/s]
+Written 101 entries to data/output/aya/experiment-1-base/en_unspecific.jsonl
+Generating 4140 prompts for es_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1783710.18it/s]
+Written 4140 entries to data/output/aya/experiment-1-base/es_specific.jsonl
+Generating 101 prompts for es_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1362137.31it/s]
+Written 101 entries to data/output/aya/experiment-1-base/es_unspecific.jsonl
+Generating 4140 prompts for it_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1634452.05it/s]
+Written 4140 entries to data/output/aya/experiment-1-base/it_specific.jsonl
+Generating 101 prompts for it_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1379885.03it/s]
+Written 101 entries to data/output/aya/experiment-1-base/it_unspecific.jsonl
+Generating 4140 prompts for pl_specific...
+You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1636762.99it/s]
+Written 4140 entries to data/output/aya/experiment-1-base/pl_specific.jsonl
+Generating 101 prompts for pl_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1580689.19it/s]
+Written 101 entries to data/output/aya/experiment-1-base/pl_unspecific.jsonl
+Generating 4140 prompts for ru_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1559164.82it/s]
+Written 4140 entries to data/output/aya/experiment-1-base/ru_specific.jsonl
+Generating 101 prompts for ru_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1117743.28it/s]
+Written 101 entries to data/output/aya/experiment-1-base/ru_unspecific.jsonl
+Generating 4140 prompts for tr_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1659443.67it/s]
+Written 4140 entries to data/output/aya/experiment-1-base/tr_specific.jsonl
+Generating 101 prompts for tr_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1529331.06it/s]
+Written 101 entries to data/output/aya/experiment-1-base/tr_unspecific.jsonl
+Submission saved to data/submissions/experiment-1-base.zip
+Done — check data/submissions/experiment-1-base.zip
+
+Running experiment-2a-cot...
+Generating 4140 prompts for de_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1582611.97it/s]
+Written 4140 entries to data/output/aya/experiment-2a-cot/de_specific.jsonl
+Generating 101 prompts for de_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 861025.82it/s]
+Written 101 entries to data/output/aya/experiment-2a-cot/de_unspecific.jsonl
+Generating 4140 prompts for el_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1547492.96it/s]
+Written 4140 entries to data/output/aya/experiment-2a-cot/el_specific.jsonl
+Generating 101 prompts for el_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1238668.73it/s]
+Written 101 entries to data/output/aya/experiment-2a-cot/el_unspecific.jsonl
+Generating 4140 prompts for en_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1639389.97it/s]
+Written 4140 entries to data/output/aya/experiment-2a-cot/en_specific.jsonl
+Generating 101 prompts for en_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1227897.69it/s]
+Written 101 entries to data/output/aya/experiment-2a-cot/en_unspecific.jsonl
+Generating 4140 prompts for es_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1594528.79it/s]
+Written 4140 entries to data/output/aya/experiment-2a-cot/es_specific.jsonl
+Generating 101 prompts for es_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1067064.75it/s]
+Written 101 entries to data/output/aya/experiment-2a-cot/es_unspecific.jsonl
+Generating 4140 prompts for it_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1619966.28it/s]
+Written 4140 entries to data/output/aya/experiment-2a-cot/it_specific.jsonl
+Generating 101 prompts for it_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 869865.92it/s]
+Written 101 entries to data/output/aya/experiment-2a-cot/it_unspecific.jsonl
+Generating 4140 prompts for pl_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1583622.30it/s]
+Written 4140 entries to data/output/aya/experiment-2a-cot/pl_specific.jsonl
+Generating 101 prompts for pl_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1077925.46it/s]
+Written 101 entries to data/output/aya/experiment-2a-cot/pl_unspecific.jsonl
+Generating 4140 prompts for ru_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1501333.09it/s]
+Written 4140 entries to data/output/aya/experiment-2a-cot/ru_specific.jsonl
+Generating 101 prompts for ru_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1220820.47it/s]
+Written 101 entries to data/output/aya/experiment-2a-cot/ru_unspecific.jsonl
+Generating 4140 prompts for tr_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1479964.08it/s]
+Written 4140 entries to data/output/aya/experiment-2a-cot/tr_specific.jsonl
+Generating 101 prompts for tr_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1220820.47it/s]
+Written 101 entries to data/output/aya/experiment-2a-cot/tr_unspecific.jsonl
+Submission saved to data/submissions/experiment-2a-cot.zip
+Done — check data/submissions/experiment-2a-cot.zip
+
+Running experiment-2b-persona...
+Generating 4140 prompts for de_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1582467.74it/s]
+Written 4140 entries to data/output/aya/experiment-2b-persona/de_specific.jsonl
+Generating 101 prompts for de_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1295488.39it/s]
+Written 101 entries to data/output/aya/experiment-2b-persona/de_unspecific.jsonl
+Generating 4140 prompts for el_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1514030.74it/s]
+Written 4140 entries to data/output/aya/experiment-2b-persona/el_specific.jsonl
+Generating 101 prompts for el_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 996764.01it/s]
+Written 101 entries to data/output/aya/experiment-2b-persona/el_unspecific.jsonl
+Generating 4140 prompts for en_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1664853.17it/s]
+Written 4140 entries to data/output/aya/experiment-2b-persona/en_specific.jsonl
+Generating 101 prompts for en_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 847249.41it/s]
+Written 101 entries to data/output/aya/experiment-2b-persona/en_unspecific.jsonl
+Generating 4140 prompts for es_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1608710.26it/s]
+Written 4140 entries to data/output/aya/experiment-2b-persona/es_specific.jsonl
+Generating 101 prompts for es_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1018328.62it/s]
+Written 101 entries to data/output/aya/experiment-2b-persona/es_unspecific.jsonl
+Generating 4140 prompts for it_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1692603.43it/s]
+Written 4140 entries to data/output/aya/experiment-2b-persona/it_specific.jsonl
+Generating 101 prompts for it_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 868083.41it/s]
+Written 101 entries to data/output/aya/experiment-2b-persona/it_unspecific.jsonl
+Generating 4140 prompts for pl_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1542955.27it/s]
+Written 4140 entries to data/output/aya/experiment-2b-persona/pl_specific.jsonl
+Generating 101 prompts for pl_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1077925.46it/s]
+Written 101 entries to data/output/aya/experiment-2b-persona/pl_unspecific.jsonl
+Generating 4140 prompts for ru_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1463499.25it/s]
+Written 4140 entries to data/output/aya/experiment-2b-persona/ru_specific.jsonl
+Generating 101 prompts for ru_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1455755.00it/s]
+Written 101 entries to data/output/aya/experiment-2b-persona/ru_unspecific.jsonl
+Generating 4140 prompts for tr_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1489357.45it/s]
+Written 4140 entries to data/output/aya/experiment-2b-persona/tr_specific.jsonl
+Generating 101 prompts for tr_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1193309.03it/s]
+Written 101 entries to data/output/aya/experiment-2b-persona/tr_unspecific.jsonl
+Submission saved to data/submissions/experiment-2b-persona.zip
+Done — check data/submissions/experiment-2b-persona.zip
+
+Running experiment-2c-uncertainty...
+Generating 4140 prompts for de_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1660078.26it/s]
+Written 4140 entries to data/output/aya/experiment-2c-uncertainty/de_specific.jsonl
+Generating 101 prompts for de_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1217312.37it/s]
+Written 101 entries to data/output/aya/experiment-2c-uncertainty/de_unspecific.jsonl
+Generating 4140 prompts for el_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1555672.69it/s]
+Written 4140 entries to data/output/aya/experiment-2c-uncertainty/el_specific.jsonl
+Generating 101 prompts for el_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 843873.91it/s]
+Written 101 entries to data/output/aya/experiment-2c-uncertainty/el_unspecific.jsonl
+Generating 4140 prompts for en_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1525201.45it/s]
+Written 4140 entries to data/output/aya/experiment-2c-uncertainty/en_specific.jsonl
+Generating 101 prompts for en_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1231467.16it/s]
+Written 101 entries to data/output/aya/experiment-2c-uncertainty/en_unspecific.jsonl
+Generating 4140 prompts for es_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1669174.14it/s]
+Written 4140 entries to data/output/aya/experiment-2c-uncertainty/es_specific.jsonl
+Generating 101 prompts for es_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1183309.23it/s]
+Written 101 entries to data/output/aya/experiment-2c-uncertainty/es_unspecific.jsonl
+Generating 4140 prompts for it_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1647790.72it/s]
+Written 4140 entries to data/output/aya/experiment-2c-uncertainty/it_specific.jsonl
+Generating 101 prompts for it_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1407391.04it/s]
+Written 101 entries to data/output/aya/experiment-2c-uncertainty/it_unspecific.jsonl
+Generating 4140 prompts for pl_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1529500.45it/s]
+Written 4140 entries to data/output/aya/experiment-2c-uncertainty/pl_specific.jsonl
+Generating 101 prompts for pl_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 903250.97it/s]
+Written 101 entries to data/output/aya/experiment-2c-uncertainty/pl_unspecific.jsonl
+Generating 4140 prompts for ru_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1526005.67it/s]
+Written 4140 entries to data/output/aya/experiment-2c-uncertainty/ru_specific.jsonl
+Generating 101 prompts for ru_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1114801.85it/s]
+Written 101 entries to data/output/aya/experiment-2c-uncertainty/ru_unspecific.jsonl
+Generating 4140 prompts for tr_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1529096.39it/s]
+Written 4140 entries to data/output/aya/experiment-2c-uncertainty/tr_specific.jsonl
+Generating 101 prompts for tr_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1183309.23it/s]
+Written 101 entries to data/output/aya/experiment-2c-uncertainty/tr_unspecific.jsonl
+Submission saved to data/submissions/experiment-2c-uncertainty.zip
+Done — check data/submissions/experiment-2c-uncertainty.zip
 
 Running experiment-2d-combined...
 Generating 4140 prompts for de_specific...
-The following generation flags are not valid and may be ignored: ['temperature', 'top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
-batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1573148.99it/s]
-Written 4140 entries to data/output/experiment-2d-combined/de_specific.jsonl
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1543641.08it/s]
+Written 4140 entries to data/output/aya/experiment-2d-combined/de_specific.jsonl
 Generating 101 prompts for de_unspecific...
-batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 862779.44it/s]
-Written 101 entries to data/output/experiment-2d-combined/de_unspecific.jsonl
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1160615.63it/s]
+Written 101 entries to data/output/aya/experiment-2d-combined/de_unspecific.jsonl
 Generating 4140 prompts for el_specific...
-batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1523328.24it/s]
-Written 4140 entries to data/output/experiment-2d-combined/el_specific.jsonl
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1479837.95it/s]
+Written 4140 entries to data/output/aya/experiment-2d-combined/el_specific.jsonl
 Generating 101 prompts for el_unspecific...
-batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1035757.22it/s]
-Written 101 entries to data/output/experiment-2d-combined/el_unspecific.jsonl
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1160615.63it/s]
+Written 101 entries to data/output/aya/experiment-2d-combined/el_unspecific.jsonl
 Generating 4140 prompts for en_specific...
-batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1622994.54it/s]
-Written 4140 entries to data/output/experiment-2d-combined/en_specific.jsonl
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1497449.00it/s]
+Written 4140 entries to data/output/aya/experiment-2d-combined/en_specific.jsonl
 Generating 101 prompts for en_unspecific...
-batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1245955.01it/s]
-Written 101 entries to data/output/experiment-2d-combined/en_unspecific.jsonl
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1132686.37it/s]
+Written 101 entries to data/output/aya/experiment-2d-combined/en_unspecific.jsonl
 Generating 4140 prompts for es_specific...
-batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1536130.45it/s]
-Written 4140 entries to data/output/experiment-2d-combined/es_specific.jsonl
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1533688.27it/s]
+Written 4140 entries to data/output/aya/experiment-2d-combined/es_specific.jsonl
 Generating 101 prompts for es_unspecific...
-batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1086217.19it/s]
-Written 101 entries to data/output/experiment-2d-combined/es_unspecific.jsonl
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1132686.37it/s]
+Written 101 entries to data/output/aya/experiment-2d-combined/es_unspecific.jsonl
 Generating 4140 prompts for it_specific...
-batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1560005.26it/s]
-Written 4140 entries to data/output/experiment-2d-combined/it_specific.jsonl
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1560846.61it/s]
+Written 4140 entries to data/output/aya/experiment-2d-combined/it_specific.jsonl
 Generating 101 prompts for it_unspecific...
-batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 994424.19it/s]
-Written 101 entries to data/output/experiment-2d-combined/it_unspecific.jsonl
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 891841.48it/s]
+Written 101 entries to data/output/aya/experiment-2d-combined/it_unspecific.jsonl
 Generating 4140 prompts for pl_specific...
-You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
-batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1481985.03it/s]
-Written 4140 entries to data/output/experiment-2d-combined/pl_specific.jsonl
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1578153.10it/s]
+Written 4140 entries to data/output/aya/experiment-2d-combined/pl_specific.jsonl
 Generating 101 prompts for pl_unspecific...
-batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1210356.30it/s]
-Written 101 entries to data/output/experiment-2d-combined/pl_unspecific.jsonl
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1006234.45it/s]
+Written 101 entries to data/output/aya/experiment-2d-combined/pl_unspecific.jsonl
 Generating 4140 prompts for ru_specific...
-batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1510080.75it/s]
-Written 4140 entries to data/output/experiment-2d-combined/ru_specific.jsonl
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1449329.65it/s]
+Written 4140 entries to data/output/aya/experiment-2d-combined/ru_specific.jsonl
 Generating 101 prompts for ru_unspecific...
-batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1043410.60it/s]
-Written 101 entries to data/output/experiment-2d-combined/ru_unspecific.jsonl
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 945590.86it/s]
+Written 101 entries to data/output/aya/experiment-2d-combined/ru_unspecific.jsonl
 Generating 4140 prompts for tr_specific...
-batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1425650.13it/s]
-Written 4140 entries to data/output/experiment-2d-combined/tr_specific.jsonl
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1485916.36it/s]
+Written 4140 entries to data/output/aya/experiment-2d-combined/tr_specific.jsonl
 Generating 101 prompts for tr_unspecific...
-batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1323827.20it/s]
-Written 101 entries to data/output/experiment-2d-combined/tr_unspecific.jsonl
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 960600.24it/s]
+Written 101 entries to data/output/aya/experiment-2d-combined/tr_unspecific.jsonl
 Submission saved to data/submissions/experiment-2d-combined.zip
 Done — check data/submissions/experiment-2d-combined.zip
+
+Running experiment-3-cultural-injection...
+Generating 4140 prompts for de_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1558744.93it/s]
+Written 4140 entries to data/output/aya/experiment-3-cultural-injection/de_specific.jsonl
+Generating 101 prompts for de_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1349123.26it/s]
+Written 101 entries to data/output/aya/experiment-3-cultural-injection/de_unspecific.jsonl
+Generating 4140 prompts for el_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1489996.44it/s]
+Written 4140 entries to data/output/aya/experiment-3-cultural-injection/el_specific.jsonl
+Generating 101 prompts for el_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1235057.45it/s]
+Written 101 entries to data/output/aya/experiment-3-cultural-injection/el_unspecific.jsonl
+Generating 4140 prompts for en_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1559024.83it/s]
+Written 4140 entries to data/output/aya/experiment-3-cultural-injection/en_specific.jsonl
+Generating 101 prompts for en_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1170233.99it/s]
+Written 101 entries to data/output/aya/experiment-3-cultural-injection/en_unspecific.jsonl
+Generating 4140 prompts for es_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1574432.73it/s]
+Written 4140 entries to data/output/aya/experiment-3-cultural-injection/es_specific.jsonl
+Generating 101 prompts for es_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1126661.45it/s]
+Written 101 entries to data/output/aya/experiment-3-cultural-injection/es_unspecific.jsonl
+Generating 4140 prompts for it_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1626948.24it/s]
+Written 4140 entries to data/output/aya/experiment-3-cultural-injection/it_specific.jsonl
+Generating 101 prompts for it_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 933094.06it/s]
+Written 101 entries to data/output/aya/experiment-3-cultural-injection/it_unspecific.jsonl
+Generating 4140 prompts for pl_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1457235.53it/s]
+Written 4140 entries to data/output/aya/experiment-3-cultural-injection/pl_specific.jsonl
+Generating 101 prompts for pl_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1075189.60it/s]
+Written 101 entries to data/output/aya/experiment-3-cultural-injection/pl_unspecific.jsonl
+Generating 4140 prompts for ru_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1513766.76it/s]
+Written 4140 entries to data/output/aya/experiment-3-cultural-injection/ru_specific.jsonl
+Generating 101 prompts for ru_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1180013.10it/s]
+Written 101 entries to data/output/aya/experiment-3-cultural-injection/ru_unspecific.jsonl
+Generating 4140 prompts for tr_specific...
+batches:   0%|          | 0/4140 [00:00<?, ?it/s]batches: 100%|██████████| 4140/4140 [00:00<00:00, 1516675.57it/s]
+Written 4140 entries to data/output/aya/experiment-3-cultural-injection/tr_specific.jsonl
+Generating 101 prompts for tr_unspecific...
+batches:   0%|          | 0/101 [00:00<?, ?it/s]batches: 100%|██████████| 101/101 [00:00<00:00, 1327977.13it/s]
+Written 101 entries to data/output/aya/experiment-3-cultural-injection/tr_unspecific.jsonl
+Submission saved to data/submissions/experiment-3-cultural-injection.zip
+Done — check data/submissions/experiment-3-cultural-injection.zip
