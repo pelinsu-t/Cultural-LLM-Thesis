@@ -1,21 +1,5 @@
 # Cross-Cultural LLM Robustness
-Evaluating the robustness of large language models in cross-cultural contexts using prompt engineering and cultural context injection.
-
-This project runs a series of controlled experiments to 
-measure how different prompting strategies affect the cultural 
-appropriateness of LLM-generated responses. 
-Each experiment produces a submission-ready output package for 
-external evaluation.
-
-**Three experiment conditions:**
- 
-| Condition | Strategy | Description |
-|---|---|---|
-| Experiment 1 | Base | Raw prompts, no modifications |
-| Experiment 2 | Prompt engineering | Chain of thought, persona, uncertainty-aware |
-| Experiment 3 | Cultural injection | NER-extracted keywords + detected culture prepended as context |
- 
-
+Evaluation pipeline for cultural awareness in multilingual LLMs: six prompting strategies across Llama 3.1 8B and Aya Expanse 8B in eight languages. Code for our CLEF 2026 ELOQUENT paper.
 ---
 
 ## Project structure
